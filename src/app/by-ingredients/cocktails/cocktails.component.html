@@ -1,0 +1,36 @@
+<ul class="container-list">
+  <ng-container *ngFor="let recipeWithMissingIngredients of byIngredientsService.getRecipesWithMissingIngredients()">
+    <mat-accordion>
+
+      <mat-expansion-panel hideToggle class="example-card">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span>{{recipeWithMissingIngredients.cocktail}}</span>
+            <span *ngIf="recipeWithMissingIngredients.missingIngredients.length > 0"
+                  style="opacity:0.7">({{recipeWithMissingIngredients.missingIngredients.length}}):
+              <ng-container
+                *ngFor="let missingIngredients of recipeWithMissingIngredients.missingIngredients">
+                  {{missingIngredients.name}}<ng-container
+                  *ngIf="missingIngredients !== recipeWithMissingIngredients.missingIngredients[recipeWithMissingIngredients.missingIngredients.length - 1]">,
+                </ng-container>
+            </ng-container>
+            </span>
+          </mat-panel-title>
+          <!--          <mat-panel-description>
+                    </mat-panel-description>-->
+        </mat-expansion-panel-header>
+        <div class="example-card"></div>
+        Rezept:
+        <ul>
+
+          <ng-container *ngFor="let ingredient of recipeWithMissingIngredients.ingredients">
+            <li>{{ingredient.amount}} {{ingredient.name}}</li>
+          </ng-container>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <div class="example-card"></div>
+  </ng-container>
+</ul>
+
+

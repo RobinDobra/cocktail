@@ -1,0 +1,31 @@
+.example-card {
+  max-width: 500px;
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 480px) {
+  .example-card {
+    max-width: 480px;
+    margin-bottom: 8px;
+  }
+  .container-list {
+    padding: 0;
+  }
+}
+
+mat-expansion-panel-header {
+  height: auto!important;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  margin-right: 0;
+}
+/*.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+  color: black;
+}*/
+mat-panel-title,
+mat-panel-description,
+span {
+  display: block;
+}
