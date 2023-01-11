@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cocktails-7a3de"
+  },
+  "targets": {
+    "cocktails-7a3de": {
+      "hosting": {
+        "cocktail": [
+          "cocktails-7a3de"
+        ]
+      }
+    }
+  }
+}

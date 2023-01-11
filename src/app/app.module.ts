@@ -7,7 +7,8 @@ import {RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-// import {ByIngredientsComponent} from "./by-ingredients/by-ingredients.component";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     ByIngredientsModule,
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
