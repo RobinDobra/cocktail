@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100vh; background-color: ghostwhite}
+html, body { height: 100vh; background-color: ghostwhite; overflow: hidden; /* Hide scrollbars */}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-mdc-tab-body-wrapper {
   width: 100vw;

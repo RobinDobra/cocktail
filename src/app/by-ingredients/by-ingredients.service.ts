@@ -11,25 +11,18 @@ export class ByIngredientsService {
   ingredients : string[] = [];
 
   constructor() {
-    console.log("I")
-
     this.generateInputIngredients();
     this.generateInputCocktails();
-    console.log("J")
-
   }
 
 
   generateInputIngredients() {
-    console.log("K")
-
     let ingredientOccurrences = new Set<string>();
     this.recipes.forEach( (recipe) => {
       recipe.ingredients.forEach( (value) => {
         ingredientOccurrences.add(value.name);
       })
     })
-    console.log("L")
 
     return Array.from(ingredientOccurrences);
   }
@@ -44,9 +37,7 @@ export class ByIngredientsService {
   }
 
   // inputIngredientsComponent
-  findUnselectedInputs(selectedIngredients: Array<string>) {
-    console.log("O")
-
+  findUnselectedIngredients(selectedIngredients: Array<string>) {
     this.recipesWithMissingIngredients = [];
     this.recipes.forEach((recipe) => {
       let recipeWithMissingIngredient: RecipeWithMissingIngredients = new RecipeWithMissingIngredients();
@@ -57,15 +48,12 @@ export class ByIngredientsService {
       // console.log("R: ", recipeWithMissingIngredient)
       this.recipesWithMissingIngredients.push(recipeWithMissingIngredient);
     })
-    console.log("P")
 
     // console.log("A: ",this.recipesWithMissingIngredients);
   }
 
   // outputCocktailComponent
   getRecipesWithMissingIngredients() {
-    // console.log("Q")
-    // return null;
     return this.recipesWithMissingIngredients.sort( (a, b) => {
       return a.missingIngredients.length - b.missingIngredients.length;
     });

@@ -28,7 +28,6 @@ export class InputIngredientsComponent implements OnInit {
   }
 
   get ingredientsFormArray() {
-    console.log("B: ing", this.formGroup.controls.ingredients.controls);
     return this.formGroup.controls;
   }
 
@@ -44,7 +43,7 @@ export class InputIngredientsComponent implements OnInit {
       null;
       //  console.log("Sie haben zwischen die Buttons geklickt, das hat kein Event produziert.
     }
-    this.byIngredientsService.findUnselectedInputs(selectedIngredients.value);
+    this.byIngredientsService.findUnselectedIngredients(selectedIngredients.value);
   }
 
 

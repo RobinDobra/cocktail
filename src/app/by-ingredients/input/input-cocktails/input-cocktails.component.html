@@ -1,0 +1,28 @@
+<div class="infobox1">
+  <div>1) Cocktails auswählen</div>
+  <div>2) Cocktails mit ähnlichen Zutaten werden ermittelt
+  </div>
+</div>
+
+
+<form [formGroup]="formGroup">
+  <ul>
+    <div style="overflow: hidden">
+    <mat-menu>Welche Cocktails möchtest du unbedingt zubereiten?</mat-menu>
+    <div *ngFor="let cocktailsForm of cocktailsFormArray.cocktails.controls">
+      <ng-container *ngIf="cocktailsForm.value === 'Sprudelwasser' || cocktailsForm.value === 'Rohrzucker (braun)' || cocktailsForm.value === 'Eiswürfel' ; then defaultChecked; else defaultUnchecked">
+      </ng-container>
+      <ng-template #defaultChecked>
+        <mat-checkbox *ngIf="cocktailsForm.value != null" type="checkbox" [value]="cocktailsForm.value"
+                      (click)="onCheckboxChange($event)" checked="true">{{cocktailsForm.value}}</mat-checkbox>
+      </ng-template>
+      <ng-template #defaultUnchecked>
+        <mat-checkbox *ngIf="cocktailsForm.value != null" type="checkbox" [value]="cocktailsForm.value"
+                      (click)="onCheckboxChange($event)" checked="false">{{cocktailsForm.value}}</mat-checkbox>
+      </ng-template>
+    </div>
+    </div>
+  </ul>
+</form>
+
+
