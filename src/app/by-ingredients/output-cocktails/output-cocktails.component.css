@@ -1,0 +1,67 @@
+#exampleCocktail {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+}
+
+#paddingRecipes {
+  padding: 0 1px 1px !important;
+}
+
+.recipes {
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .container-list {
+    padding: 0;
+  }
+}
+
+ul {
+  overflow: auto;
+  max-height: 100vmin;
+  border-top: 5px;
+}
+
+.mat-divider {
+  max-width: 500px;
+}
+
+.mat-accordion .mat-expansion-panel {
+  font-weight: 500;
+  border-radius: 0;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+
+}
+
+.mat-accordion > .mat-expansion-panel-spacing:first-child, .mat-accordion > :first-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing {
+  margin-top: 5px;
+}
+
+.mat-expansion-panel-header {
+  font-weight: 500;
+  height: auto !important;
+}
+
+.mat-expansion-panel {
+  max-width: 500px;
+  margin-bottom: 8px;
+  background: ghostwhite;
+}
+
+mat-panel-title,
+mat-panel-description,
+span {
+  display: block;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  margin-right: 0;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 24px 6px !important;
+}
+
+.mat-expansion-panel-content {
+  display: block;
+}

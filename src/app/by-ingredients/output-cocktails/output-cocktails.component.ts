@@ -4,11 +4,11 @@ import {ByIngredientsService} from "../by-ingredients.service";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 
 @Component({
-  selector: 'app-cocktails',
-  templateUrl: './cocktails.component.html',
-  styleUrls: ['./cocktails.component.css']
+  selector: 'app-output-cocktails',
+  templateUrl: './output-cocktails.component.html',
+  styleUrls: ['./output-cocktails.component.css']
 })
-export class CocktailsComponent implements OnInit {
+export class OutputCocktailsComponent implements OnInit {
 
   constructor(public byIngredientsService: ByIngredientsService) { }
 

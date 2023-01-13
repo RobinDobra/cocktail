@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {IngredientsComponent} from './ingredients/ingredients.component';
-import {CocktailsComponent} from './cocktails/cocktails.component';
+import {InputIngredientsComponent} from './input/input-ingredients/input-ingredients.component';
+import {OutputCocktailsComponent} from './output-cocktails/output-cocktails.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ByIngredientsComponent} from "./by-ingredients.component";
 import {MatCheckboxModule} from "@angular/material/checkbox";
@@ -12,13 +12,21 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatTableModule} from "@angular/material/table";
+import {MatGridListModule} from "@angular/material/grid-list";
+import { InputCocktailsComponent } from './input/input-cocktails/input-cocktails.component';
+import { InputSwitchComponent } from './input/input-switch/input-switch.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { InputTypeComponent } from './input/common/input-type/input-type.component';
 
 
 @NgModule({
   declarations: [
-    IngredientsComponent,
+    InputIngredientsComponent,
     ByIngredientsComponent,
-    CocktailsComponent,
+    OutputCocktailsComponent,
+    InputCocktailsComponent,
+    InputSwitchComponent,
+    InputTypeComponent,
   ],
   exports: [
     ByIngredientsComponent,
@@ -34,7 +42,9 @@ import {MatTableModule} from "@angular/material/table";
     MatToolbarModule,
     MatMenuModule,
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule,
+    MatTabsModule
   ]
 })
 export class ByIngredientsModule {

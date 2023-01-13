@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IngredientsComponent } from './ingredients.component';
+import { InputIngredientsComponent } from './input-ingredients.component';
 import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
 
 describe('IngredientsComponent', () => {
-  let component: IngredientsComponent;
-  let fixture: ComponentFixture<IngredientsComponent>;
+  let component: InputIngredientsComponent;
+  let fixture: ComponentFixture<InputIngredientsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ReactiveFormsModule],
-      declarations: [ IngredientsComponent]
+      declarations: [ InputIngredientsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IngredientsComponent);
+    fixture = TestBed.createComponent(InputIngredientsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

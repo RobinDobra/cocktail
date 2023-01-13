@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%}
+html, body { height: 100vh; background-color: ghostwhite}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-tab-body-wrapper {
+  width: 100vw;
+  margin: auto;
+  /*width: 100vw;*/
+  /*overflow-x: hidden;*/
+  /*overflow-y: scroll;*/
+  display: none;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
