@@ -1,12 +1,24 @@
-
 <div></div>
 <mat-tab-group>
-  <mat-tab label="Cocktails">
-    <app-input-cocktails></app-input-cocktails>
-  </mat-tab>
   <mat-tab label="Zutaten">
+    <ng-template mat-tab-label>
+      <label>Zutaten</label>
+      <mat-icon
+        matTooltip="Basierend auf die Auswahl der Zutaten werden die Cocktails mit den wenigsten fehlenden Bestandteilen angezeigt."
+        class="iconTransform" aria-hidden="false" fontIcon="info"></mat-icon>
+    </ng-template>
     <app-input-ingredients></app-input-ingredients>
   </mat-tab>
+  <mat-tab label="Cocktails">
+    <ng-template mat-tab-label>
+      <label>Cocktails</label>
+      <mat-icon
+        matTooltip="Basierend auf der Auswahl der Cocktails werden andere Cocktails mit den wenigsten fehlenden Bestandteilen angezeigt."
+        class="iconTransform" aria-hidden="false" fontIcon="info"></mat-icon>
+    </ng-template>
+    <app-input-cocktails></app-input-cocktails>
+  </mat-tab>
+
 </mat-tab-group>
 
 <mat-divider></mat-divider>
@@ -15,4 +27,3 @@
 <mat-divider></mat-divider>
 
 <app-output-cocktails></app-output-cocktails>
-

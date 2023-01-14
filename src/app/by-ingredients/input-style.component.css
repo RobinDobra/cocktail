@@ -29,3 +29,8 @@
   --mdc-checkbox-selected-icon-color: #11930d;
 }
 
+/*
+::ng-deep .mat-mdc-tab-body-wrapper {
+  display: contents;
+}
+*/

@@ -4,7 +4,7 @@
     <mat-expansion-panel id="exampleCocktail" hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <span>Name des Cocktails</span>
+          <span class="heading">Name des Cocktails</span>
           <span style="opacity: 0.7">(fehlend)|(insgesamt): fehlende Zutaten </span>
         </mat-panel-title>
       </mat-expansion-panel-header>
@@ -17,7 +17,8 @@
       <mat-expansion-panel hideToggle class="example-card; recipes">
         <mat-expansion-panel-header >
           <mat-panel-title >
-            <span>{{recipeWithMissingIngredients.cocktail}}</span>
+            <span class="heading" *ngIf="recipeWithMissingIngredients.missingIngredients.length > 0">{{recipeWithMissingIngredients.cocktail}}</span>
+            <span class="heading greenText" *ngIf="recipeWithMissingIngredients.missingIngredients.length == 0">{{recipeWithMissingIngredients.cocktail}}</span>
             <span *ngIf="recipeWithMissingIngredients.missingIngredients.length > 0"
                   style="opacity:0.7">({{recipeWithMissingIngredients.missingIngredients.length}}|{{recipeWithMissingIngredients.ingredients.length}}):
               <ng-container
@@ -32,7 +33,7 @@
                     </mat-panel-description>-->
         </mat-expansion-panel-header>
         <div style="margin-top:5px"></div>
-        Rezept:
+        Rezept
         <ul>
           <ng-container *ngFor="let ingredient of recipeWithMissingIngredients.ingredients">
             <li>{{ingredient.amount}} {{ingredient.name}}</li>
@@ -40,6 +41,8 @@
         </ul>
       </mat-expansion-panel>
       <mat-divider></mat-divider>
+<!--      <mat-divider></mat-divider>-->
+<!--      <mat-divider></mat-divider>-->
     </mat-accordion>
 <!--    <div class="example-card"></div>-->
 

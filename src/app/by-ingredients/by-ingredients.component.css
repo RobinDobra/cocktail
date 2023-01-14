@@ -9,15 +9,11 @@ footer{
 
 .toolbar{
   background: cadetblue;
-/*  opacity: 1;
-  position: sticky;
-  position: -webkit-sticky;*/ /* For macOS/iOS Safari */
-  top: 0; /* Sets the sticky toolbar to be on top */
-  /*z-index: 1000; !* Ensure that your app's content doesn't overlap the toolbar *!*/
+  top: 0;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 600px;
   margin: auto;
 }
 

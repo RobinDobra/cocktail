@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100vh; background-color: ghostwhite; overflow: hidden; /* Hide scrollbars */}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100vh;
+  background-color: ghostwhite; /*overflow: auto;*/
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 .mat-mdc-tab-body-wrapper {
   width: 100vw;
   margin: auto;
@@ -11,6 +19,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: none;
 
 }
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+.line-broken-tooltip {
+  white-space: pre-line;
+}
+::ng-deep .material-tooltip {
+  white-space: pre-line;
+  max-width: 500px !important;
 }

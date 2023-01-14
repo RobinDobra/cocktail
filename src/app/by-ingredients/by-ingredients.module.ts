@@ -17,6 +17,9 @@ import { InputCocktailsComponent } from './input/input-cocktails/input-cocktails
 import { InputSwitchComponent } from './input/input-switch/input-switch.component';
 import {MatTabsModule} from "@angular/material/tabs";
 import { InputTypeComponent } from './input/common/input-type/input-type.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { InputTypeComponent } from './input/common/input-type/input-type.compone
     MatExpansionModule,
     MatTableModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatIconModule
   ]
 })
 export class ByIngredientsModule {
